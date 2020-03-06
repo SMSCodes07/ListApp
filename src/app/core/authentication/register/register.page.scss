@@ -1,0 +1,30 @@
+.registerForm{
+    width: 100%;
+    margin-top: 30%;
+}
+.registerItem{
+    width: 90%;
+    margin: auto;
+    display: block;
+    --highlight-color: #f4cd6f;
+    --highlight-color-focused: #f4cd6f;
+    --highlight-color-valid: #f4cd6f;
+    --border-color: #f4cd6f;
+}
+.item-has-focus.label-floating.sc-ion-label-md-h, .item-has-focus .label-floating.sc-ion-label-md-h, .item-has-placeholder.label-floating.sc-ion-label-md-h, .item-has-placeholder .label-floating.sc-ion-label-md-h, .item-has-value.label-floating.sc-ion-label-md-h, .item-has-value .label-floating.sc-ion-label-md-h {
+    color: #f4cd6f
+}
+.item-has-focus.label-floating.sc-ion-label-ios-h, .item-has-focus .label-floating.sc-ion-label-ios-h, .item-has-placeholder.label-floating.sc-ion-label-ios-h, .item-has-placeholder .label-floating.sc-ion-label-ios-h, .item-has-value.label-floating.sc-ion-label-ios-h, .item-has-value .label-floating.sc-ion-label-ios-h {
+    color: #f4cd6f
+}
+.registerButton{
+    width: 90%;
+    height: 45px;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}
+.customModal{
+    font-family: 'Product Sans', sans-serif;
+    color: #000000;
+}

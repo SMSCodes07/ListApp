@@ -1,9 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <!-- Logo del area de registro -->
+  <img class="authenticationLogo" src="../../../../assets/img/registerLogin.png" alt="ListApp" title="ListApp">
+  <!-- Logo del area de registro -->
+  <!-- Formulario de registro -->
+  <form class="ProductSans registerForm" [formGroup]="registerForm">
+    <ion-item class="registerItem ProductSans">
+      <ion-label class="registerLabel ProductSans" position="floating" color="butterColor">Nombre y apellido</ion-label>
+      <ion-input class="registerInput ProductSans" type="text" formControlName="userName"></ion-input>
+    </ion-item>
+    <ion-item class="registerItem ProductSans">
+      <ion-label class="registerLabel ProductSans" position="floating" color="butterColor">Correo electrónico</ion-label>
+      <ion-input class="registerInput ProductSans" type="email" formControlName="userEmail"></ion-input>
+    </ion-item>
+    <ion-item class="registerItem ProductSans">
+      <ion-label class="registerLabel ProductSans" position="floating" color="butterColor">Contraseña</ion-label>
+      <ion-input class="registerInput ProductSans" type="password" formControlName="userPassword"></ion-input>
+    </ion-item>
+    <ion-item class="registerItem ProductSans">
+      <ion-label class="registerLabel ProductSans" position="floating" color="butterColor">Confirmar contraseña</ion-label>
+      <ion-input class="registerInput ProductSans" type="password" formControlName="userPasswordMatch"></ion-input>
+    </ion-item>
+  </form>
+  <ion-button class="ProductSans ion-text-capitalize ion-text-center registerButton" color="butterColor" [disabled]="registerForm.invalid" (click)="createUser()">Registrarme</ion-button>
+  <ion-button class="ProductSans ion-text-capitalize ion-text-center registerButton" color="butterColor" (click)="goToLogin()">Cancelar</ion-button>
+  <!-- Formulario de registro -->
 </ion-content>

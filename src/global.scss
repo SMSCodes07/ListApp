@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+// Importando colores nuevos
+@import "./theme/colors.scss";
+// Importando colores nuevos
+
+@font-face{
+    font-family: 'Product Sans';
+    src: url('./assets/fonts/ProductSans-Regular.ttf');
+}
+.ProductSans{
+    font-family: 'Product Sans', sans-serif !important;
+}
+.authenticationLogo{
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin-top: 20%;
+}
