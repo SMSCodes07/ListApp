@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <!-- Logo del area de inicio de sesión -->
+  <img class="authenticationLogo" src="../../../../assets/img/registerLogin.png" alt="ListApp" title="ListApp">
+  <!-- Logo del area de inicio de sesión -->
+  <!-- Formulario de inicio de sesión -->
+  <form class="ProductSans loginForm" [formGroup]="loginForm">
+    <ion-item class="loginItem ProductSans">
+      <ion-label class="loginLabel ProductSans" position="floating" color="butterColor">Correo electrónico</ion-label>
+      <ion-input class="loginInput ProductSans" type="email" formControlName="userEmail"></ion-input>
+    </ion-item>
+    <ion-item class="loginItem ProductSans">
+      <ion-label class="loginLabel ProductSans" position="floating" color="butterColor">Contraseña</ion-label>
+      <ion-input class="loginInput ProductSans" type="password" formControlName="userPassword"></ion-input>
+    </ion-item>
+  </form>
+  <!-- Password text -->
+  <h6 class="ion-text-center ProductSans passwordText" (click)="showPasswordAlert()">¿Olvidaste tu contraseña?</h6>
+  <!-- Password text -->
+  <ion-button class="ProductSans ion-text-capitalize ion-text-center loginButton" color="butterColor" [disabled]="loginForm.invalid" (click)="loginUser()">Iniciar sesión</ion-button>
+  <ion-button class="ProductSans ion-text-capitalize ion-text-center loginButton" color="butterColor" (click)="goToRegister()">Cancelar</ion-button>
+  <!-- Formulario de inicio de sesión -->
 </ion-content>
