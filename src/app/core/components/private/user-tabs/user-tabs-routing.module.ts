@@ -5,8 +5,23 @@ import { UserTabsPage } from './user-tabs.page';
 
 const routes: Routes = [
   {
+    path: 'userTabs',
+    component: UserTabsPage,
+    children: [
+      {
+        path: 'userList',
+        loadChildren: () => import('../user-list/user-list.module').then(m => m.UserListPageModule),
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule),
+      }
+    ]
+  },
+  {
     path: '',
-    component: UserTabsPage
+    redirectTo: 'userTabs/userList',
+    pathMatch: 'full',
   }
 ];
 

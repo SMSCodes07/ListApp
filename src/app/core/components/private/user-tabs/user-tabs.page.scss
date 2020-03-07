@@ -1,0 +1,13 @@
+ion-tab-button:focus {
+    ion-icon, ion-label {
+        color: var(--ion-color-butterColor) !important;
+        --ion-color-base: var(--ion-color-butterColor) !important;
+    }
+}
+.userTabs{
+    background-color: #f4cd6f !important;
+}
+.userTabBar{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}

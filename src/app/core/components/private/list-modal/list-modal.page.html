@@ -1,0 +1,65 @@
+<ion-content>
+  <!-- Titulo del modal -->
+  <h1 class="modalTitle ProductSans">Agregar lista</h1>
+  <h2 class="listDate ProductSans">{{listDate}}</h2>
+  <!-- Titulo del modal -->
+  <!-- Formulario del modal -->
+  <form class="ProductSans modalForm" [formGroup]="modalForm">
+    <ion-item class="modalItem ProductSans">
+      <ion-label class="modalLabel ProductSans" position="floating" color="butterColor">Agregue un título</ion-label>
+      <ion-input class="modalInput ProductSans" type="text" formControlName="listTitle"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="7">
+          <ion-item class="modalCol1Item ProductSans">
+            <ion-label class="modalLabel ProductSans" position="floating" color="butterColor">Agregar item</ion-label>
+            <ion-input class="modalInput ProductSans" type="text" formControlName="listItem"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="5">
+          <ion-item class="modalCol2Item ProductSans">
+            <ion-label class="modalLabel ProductSans" position="floating" color="butterColor">Cantidad</ion-label>
+            <ion-input class="modalInput ProductSans" type="number" formControlName="listItemNumber"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <div class="listContainer">
+    <ion-list>
+      <ion-list-header>
+        <ion-label class="ProductSans">Lista:</ion-label>
+      </ion-list-header>
+      <ion-card *ngFor="let item of itemsList; let itemPosition = index" color="dark" class="itemCard">
+        <ion-item-sliding>
+          <ion-item class="resultItem" color="dark">
+            <ul class="itemCardList">
+              <li class="cardListItem"></li><h3 class="ProductSans itemTitle">{{item.itemName}}</h3>
+              <li class="cardListItem"></li><h5 class="ProductSans itemNumber">Cantidad: {{item.itemNumber}}</h5>
+            </ul>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option class="ion-text-capitalize ProductSans" color="danger" (click)="deleteItem(itemPosition)">Eliminar</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-card>
+    </ion-list>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">
+        <ion-button class="ion-text-center ion-text-capitalize addButton1 ProductSans" color="butterColor" [disabled]="modalForm.invalid" (click)="addItem()">
+          <ion-icon expand="full" slot="start" name="add"></ion-icon>
+          Agregar item
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button class="ion-text-center ion-text-capitalize addButton2 ProductSans" color="dark" [disabled]="buttonValidation" (click)="createList()">
+          <ion-icon expand="full" slot="start" name="checkmark" color="butterColor"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- Formulario del modal -->
+</ion-content>

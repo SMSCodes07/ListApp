@@ -1,3 +1,4 @@
+// Color nuevo
 :root {
     --ion-color-butterColor: #f4cd6f;
     --ion-color-butterColor-rgb: 244,205,111;
@@ -5,8 +6,17 @@
     --ion-color-butterColor-contrast-rgb: 0,0,0;
     --ion-color-butterColor-shade: #d7b462;
     --ion-color-butterColor-tint: #f5d27d;
+
+    --ion-color-grayLight: #e6e6e6;
+    --ion-color-grayLight-rgb: 230,230,230;
+    --ion-color-grayLight-contrast: #000000;
+    --ion-color-grayLight-contrast-rgb: 0,0,0;
+    --ion-color-grayLight-shade: #cacaca;
+    --ion-color-grayLight-tint: #e9e9e9;
+
 }
 // Color nuevo
+// Clase para el color nuevo
 .ion-color-butterColor {
     --ion-color-base: var(--ion-color-butterColor) !important;
     --ion-color-base-rgb: var(--ion-color-butterColor-rgb) !important;
@@ -15,4 +25,12 @@
     --ion-color-shade: var(--ion-color-butterColor-shade) !important;
     --ion-color-tint: var(--ion-color-butterColor-tint) !important;
 }
-// Color nuevo
+.ion-color-grayLight {
+    --ion-color-base: var(--ion-color-grayLight) !important;
+    --ion-color-base-rgb: var(--ion-color-grayLight-rgb) !important;
+    --ion-color-contrast: var(--ion-color-grayLight-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-grayLight-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-grayLight-shade) !important;
+    --ion-color-tint: var(--ion-color-grayLight-tint) !important;
+}
+// Clase para el color nuevo

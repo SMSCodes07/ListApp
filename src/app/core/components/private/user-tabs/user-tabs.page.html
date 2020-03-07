@@ -1,9 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>userTabs</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<!-- Tabs -->
+<ion-tabs class="userTabs">
+  <ion-tab-bar slot="bottom" color="grayLight" class="userTabBar">
+    <ion-tab-button tab="userList">
+      <ion-icon name="list" color="dark" class="tabIcon"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-icon name="add" color="dark" class="tabIcon" (click)="openModal()"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="profile">
+      <ion-icon name="person" color="dark" class="tabIcon"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+<!-- Tabs -->

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ListModalPage } from '../list-modal/list-modal.page';
 
 @Component({
   selector: 'app-user-tabs',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserTabsPage implements OnInit {
 
-  constructor() { }
+  constructor(private nativeModal: ModalController) { }
 
   ngOnInit() {
   }
-
+  // Funcion para crear el modal
+  async openModal () {
+    const listModal = await this.nativeModal.create({
+      component: ListModalPage,
+      animated: true,
+      swipeToClose: true,
+      showBackdrop: false,
+      cssClass: 'listModal'
+    })
+    return await listModal.present();
+  }
+  // Funcion para crear el modal
 }

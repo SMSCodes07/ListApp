@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./core/components/private/profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'list-modal',
+    loadChildren: () => import('./core/components/private/list-modal/list-modal.module').then( m => m.ListModalPageModule)
+  },
 ];
 
 @NgModule({

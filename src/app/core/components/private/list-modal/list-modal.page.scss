@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.modalTitle{
+    font-size: 6.5vw;
+    margin-top: 7%;
+    margin-left: 6%;
+}
+.listDate{
+    font-size: 4vw;
+    margin-top: 2%;
+    margin-left: 6%;
+}
+.modalForm{
+    width: 100%;
+}
+.modalItem{
+    width: 88%;
+    margin: auto;
+    display: block;
+    --highlight-color: #f4cd6f;
+    --highlight-color-focused: #f4cd6f;
+    --highlight-color-valid: #f4cd6f;
+    --border-color: #f4cd6f;
+}
+.modalCol1Item{
+    width: 80%;
+    margin: auto;
+    display: block;
+    --highlight-color: #f4cd6f;
+    --highlight-color-focused: #f4cd6f;
+    --highlight-color-valid: #f4cd6f;
+    --border-color: #f4cd6f;
+}
+.modalCol2Item{
+    width: 80%;
+    --highlight-color: #f4cd6f;
+    --highlight-color-focused: #f4cd6f;
+    --highlight-color-valid: #f4cd6f;
+    --border-color: #f4cd6f;
+}
+.item-has-focus.label-floating.sc-ion-label-md-h, .item-has-focus .label-floating.sc-ion-label-md-h, .item-has-placeholder.label-floating.sc-ion-label-md-h, .item-has-placeholder .label-floating.sc-ion-label-md-h, .item-has-value.label-floating.sc-ion-label-md-h, .item-has-value .label-floating.sc-ion-label-md-h {
+    color: #f4cd6f
+}
+.item-has-focus.label-floating.sc-ion-label-ios-h, .item-has-focus .label-floating.sc-ion-label-ios-h, .item-has-placeholder.label-floating.sc-ion-label-ios-h, .item-has-placeholder .label-floating.sc-ion-label-ios-h, .item-has-value.label-floating.sc-ion-label-ios-h, .item-has-value .label-floating.sc-ion-label-ios-h {
+    color: #f4cd6f
+}
+.modalButton{
+    width: 90%;
+    height: 45px;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}
+.customModal{
+    font-family: 'Product Sans', sans-serif;
+    color: #000000;
+}
+.addButton1{
+    width: 88%;
+    height: 45px;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}
+.addButton2{
+    width: 85%;
+    height: 46px;
+    margin-top: 15%;
+}
+.listContainer{
+    width: 88%;
+    max-height: 40%;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    overflow-y: scroll;
+}
+.itemCardList{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+}
+.itemTitle{
+    font-size: 4.5vw;
+    color: #f4cd6f;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+.itemNumber{
+    font-size: 3.5vw;
+    color: #f4cd6f;
+    margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.itemCard{
+    margin-bottom: 10px;
+}
