@@ -1,3 +1,33 @@
 <ion-content color="butterColor">
-
+    <!-- Logo -->
+    <img class="homeLogo" src="../../../../../assets/img/logoInicio.png" alt="ListApp" title="ListApp">
+    <!-- Logo -->
+    <!-- Item para la busqueda -->
+    <form [formGroup]="searchForm">
+      <ion-item class="searchItem">
+        <ion-icon slot="start" name="search" color="light"></ion-icon>
+        <ion-input class="searchInput ProductSans" type="text" placeholder="Buscar una lista" formControlName="searchParams" (keyup)="searchList()"></ion-input>
+      </ion-item>
+    </form>
+    <!-- Item para la busqueda -->
+    <!-- Tarjeta del listado -->
+    <ion-card class="listCard">
+        <h2 class="homeTitle ProductSans">Mis listas</h2>
+        <ion-list>
+            <ion-card *ngFor="let item of shoppingList; let itemPosition = index" color="dark" class="itemCard" (click)="goToDetails(item.listCode)">
+                <ion-item-sliding>
+                  <ion-item class="resultItem" color="dark">
+                    <ul class="itemCardList">
+                      <li class="cardListItem"></li><h3 class="ProductSans itemTitle">{{item.listTitle}}</h3>
+                      <li class="cardListItem"></li><h5 class="ProductSans itemNumber">Creada el: {{item.listCreationDate}}</h5>
+                    </ul>
+                  </ion-item>
+                  <ion-item-options side="end">
+                    <ion-item-option class="ion-text-capitalize ProductSans" color="danger" (click)="deleteList(item.listCode)">Eliminar</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+              </ion-card>
+        </ion-list>
+    </ion-card>
+    <!-- Tarjeta del listado -->
 </ion-content>

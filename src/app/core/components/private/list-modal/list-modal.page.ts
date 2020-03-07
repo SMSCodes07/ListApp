@@ -83,10 +83,15 @@ export class ListModalPage implements OnInit {
     const newDate = new Date();
     const registerDate = (newDate.getDate() + '/' + (newDate.getMonth() + 1) + '/' + newDate.getFullYear());
     // Extrayendo los datos de la fecha
+    // Extrayendo datos del formulario
+    const listTitle = this.modalForm.value.listTitle;
+    // Extrayendo datos del formulario
     // Creando registro en la base de datos
     await this.realtimeDatabase.database.ref('listAppPlatform/users/' + userID + '/userList/' + listCode + '/').set({
+      listTitle: listTitle,
       listCreationDate: registerDate,
-      listItems: listData
+      listItems: listData,
+      listCode: listCode,
     })
     // Creando registro en la base de datos
     // Notificando la creacion de la nota
