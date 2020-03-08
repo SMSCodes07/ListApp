@@ -64,7 +64,10 @@ export class UserListPage implements OnInit {
   // Funcion para ir a la pagina de detalles
   goToDetails(listCode) {
     // Navegando a la ruta
-    this.router.navigate(['/list-details'], {queryParams: listCode})
+    const objectData = {
+      accessCode: JSON.stringify(listCode),
+    };
+    this.router.navigate(['/list-details'], {queryParams: objectData})
     // Navegando a la ruta
   }
   // Funcion para ir a la pagina de detalles

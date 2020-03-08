@@ -1,0 +1,84 @@
+.detailsLogo{
+    width: 50%;
+    margin: auto;
+    display: block;
+    margin-top: 15%;
+}
+.searchItem{
+    width: 75%;
+    margin: auto;
+    display: block;
+    --background: #0000001a;
+    border-radius: 25px;
+    margin-top: 20%;
+    --highlight-color: #f4cd6f;
+    --highlight-color-focused: #f4cd6f;
+    --highlight-color-valid: #f4cd6f;
+    --border-color: #f4cd6f;
+}
+.listCard{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 70%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: none;
+    --background: #ffffff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.searchInput{
+    --color: #ffffff;
+}
+.detailsTitle{
+    font-size: 6.5vw;
+    margin-top: 7%;
+    margin-left: 6%;
+}
+.listContainer{
+    width: 88%;
+    max-height: 40%;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    overflow-y: scroll;
+}
+.itemCardList{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+}
+.itemTitle{
+    font-size: 4.5vw;
+    color: #f4cd6f;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+.itemNumber{
+    font-size: 3.5vw;
+    color: #f4cd6f;
+    margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.itemCard{
+    margin-bottom: 10px;
+}
+.listContainer{
+    width: 88%;
+    max-height: 70%;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    overflow-y: scroll;
+}
+.deleteButton{
+    width: 88%;
+    height: 45px;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}

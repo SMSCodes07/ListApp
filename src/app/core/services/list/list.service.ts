@@ -18,4 +18,14 @@ export class ListService {
     // Retornando datos
   }
   // Metodo publico para retoranr las listas
+  // Metodo publico para retornar las listas segun el ID
+  public returnListByID(listCode) {
+    // Extrayendo userID
+    const userID = this.userAuth.auth.currentUser.uid;    
+    // Extrayendo userID
+    // Retornando datos
+    return this.realtimeDatabase.object<{listCode: null, listCreationDate: null, listItems: {}, listTitle: null}>('listAppPlatform/users/' + userID + '/userList/' + listCode + '/');
+    // Retornando datos
+  }
+  // Metodo publico para retornar las listas segun el ID
 }

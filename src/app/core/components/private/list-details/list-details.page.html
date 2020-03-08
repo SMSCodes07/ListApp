@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>listDetails</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content color="butterColor">
+  <!-- Logo -->
+  <img class="detailsLogo" src="../../../../../assets/img/logoInicio.png" alt="ListApp" title="ListApp">
+  <!-- Logo -->
+  <!-- Tarjeta del listado -->
+  <ion-card class="listCard">
+    <h2 class="detailsTitle ProductSans">{{listData.listTitle}}</h2>
+    <div class="listContainer">
+      <ion-list>
+        <ion-list-header>
+          <ion-label class="ProductSans">Items de la lista:</ion-label>
+        </ion-list-header>
+        <ion-card *ngFor="let item of listItems; let itemPosition = index" color="dark" class="itemCard">
+          <ion-item-sliding>
+            <ion-item class="resultItem" color="dark">
+              <ul class="itemCardList">
+                <li class="cardListItem"></li><h3 class="ProductSans itemTitle">{{item.itemName}}</h3>
+                <li class="cardListItem"></li><h5 class="ProductSans itemNumber">Cantidad: {{item.itemNumber}}</h5>
+              </ul>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option class="ion-text-capitalize ProductSans" color="danger" (click)="deleteItem(itemPosition)">Eliminar</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-card>
+      </ion-list>
+    </div>
+    <ion-button class="ion-text-center ion-text-capitalize deleteButton ProductSans" color="danger" (click)="deleteList()">
+      <ion-icon expand="full" slot="start" name="trash"></ion-icon>
+      Eliminar lista
+    </ion-button>  
+  </ion-card>
+  <!-- Tarjeta del listado -->
 </ion-content>

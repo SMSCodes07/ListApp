@@ -40,6 +40,9 @@ export class ListModalPage implements OnInit {
   }
   // Funcion para agregar un nuevo itema a la lista
   addItem() {
+    // Creando codigo unico para cada item
+    const itemCode = Date.now();
+    // Creando codigo unico para cada item
     // Extrayendo datos del formulario
     const listItem = this.modalForm.value.listItem;
     const listItemNumber = this.modalForm.value.listItemNumber;
@@ -48,6 +51,7 @@ export class ListModalPage implements OnInit {
     this.itemsList.push({
       itemName: listItem,
       itemNumber: listItemNumber,
+      itemCode: itemCode,
     });
     // Agregano articulos a la lista
     // Limpiando los campos del formulario
