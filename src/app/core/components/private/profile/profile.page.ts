@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-
-  constructor() { }
+  // Objeto para los datos del usuario
+  userData = {
+    userEmail: '',
+    userName: '',
+  };
+  // Objeto para los datos del usuario
+  constructor(private userAuth: AngularFireAuth) { }
 
   ngOnInit() {
+    this.userData.userEmail = this.userAuth.auth.currentUser.email;
+    this.userData.userName = this.userAuth.auth.currentUser.displayName;
   }
-
+  
 }

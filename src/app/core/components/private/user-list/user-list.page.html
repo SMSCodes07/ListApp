@@ -14,9 +14,9 @@
     <ion-card class="listCard">
         <h2 class="homeTitle ProductSans">Mis listas</h2>
         <ion-list>
-            <ion-card *ngFor="let item of shoppingList; let itemPosition = index" color="dark" class="itemCard" (click)="goToDetails(item.listCode)">
+            <ion-card *ngFor="let item of shoppingList; let itemPosition = index" color="dark" class="itemCard">
                 <ion-item-sliding>
-                  <ion-item class="resultItem" color="dark">
+                  <ion-item class="resultItem" color="dark" (click)="goToDetails(item.listCode)">
                     <ul class="itemCardList">
                       <li class="cardListItem"></li><h3 class="ProductSans itemTitle">{{item.listTitle}}</h3>
                       <li class="cardListItem"></li><h5 class="ProductSans itemNumber">Creada el: {{item.listCreationDate}}</h5>
